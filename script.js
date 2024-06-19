@@ -8,6 +8,12 @@ document.querySelector('#choseSize').addEventListener('input', e => {
   createGridContainer(SIZE);
 });
 
+document.querySelector('#clear-btn').addEventListener('click', () => {
+  document.querySelectorAll('.grid-element').forEach(el => {
+    el.style.background = '#fff'
+  });
+});
+
 
 function createGridContainer(userInput) {
   const totalOfDivs = getNumOfDiv(userInput);
