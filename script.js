@@ -1,19 +1,25 @@
+let actualColor = '#000';
 // start the web page with a grid created
 createGridContainer(8);
 
+// create the grid layout
 document.querySelector('#choseSize').addEventListener('input', e => {
   const SIZE = e.target.value;
   showActualSize(SIZE);
   cleanGridContainer();
   createGridContainer(SIZE);
 });
-
+// get the actual color
+document.querySelector('#choseColor').addEventListener('input', e => {
+  actualColor = e.target.value;
+});
+// clean the grid layout
 document.querySelector('#clear-btn').addEventListener('click', () => {
   document.querySelectorAll('.grid-element').forEach(el => {
     el.style.background = '#fff'
   });
 });
-
+// toggle the grid lines
 document.querySelector('#grid-lines-btn').addEventListener('click', () => {
   document.querySelectorAll('.grid-element').forEach(el => {
     el.classList.toggle('el-border');
@@ -32,7 +38,7 @@ function createGridContainer(userInput) {
     gridEl.style.height = `${gridElSize}px`;  // set the correct height & width
     gridEl.style.width = `${gridElSize}px`;
     gridEl.addEventListener('mouseover', e => {
-      e.target.style.background = '#000'
+      e.target.style.background = actualColor;
     });
     // put div in the container
     document.querySelector('.grid-container').appendChild(gridEl);
