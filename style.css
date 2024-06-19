@@ -6,7 +6,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
-  border: solid .01px red;
 }
 body {
   height: 100vh;
@@ -48,7 +47,7 @@ main {
   order: 2;
   height: 500px;
   width: 500px;
-  border: solid 2px #000;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-wrap: wrap;
 }
@@ -62,6 +61,11 @@ main {
   justify-content: space-evenly;
   gap: .5rem;
   padding: 1rem;
+}
+/* buttons */
+button,
+input {
+  width: 100%;
 }
 /* footer */
 footer {
