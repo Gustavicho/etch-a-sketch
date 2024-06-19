@@ -52,7 +52,7 @@ main {
 }
 
 .grid-container {
-  background-color: var(--clr-light);
+  background-color: #fff; /* to have contrast with the body*/
   order: 2;
   height: 500px;
   width: 500px;
