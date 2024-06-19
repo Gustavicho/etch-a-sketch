@@ -14,6 +14,11 @@ document.querySelector('#clear-btn').addEventListener('click', () => {
   });
 });
 
+document.querySelector('#grid-lines-btn').addEventListener('click', () => {
+  document.querySelectorAll('.grid-element').forEach(el => {
+    el.classList.toggle('el-border');
+  });
+})
 
 function createGridContainer(userInput) {
   const totalOfDivs = getNumOfDiv(userInput);
