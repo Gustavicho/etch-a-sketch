@@ -12,7 +12,7 @@ for (let i = 0; i < totalOfDivs; i++){
   gridEl.style.height = `${gridElSize}px`;
   gridEl.style.width = `${gridElSize}px`;
   gridEl.addEventListener('mouseover', e => {
-    e.target.style.background = '#111'
+    e.target.style.background = '#000'
   });
   // put div in the container
   document.querySelector('.grid-container').appendChild(gridEl);
