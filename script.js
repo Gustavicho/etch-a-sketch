@@ -1,7 +1,7 @@
 // start the web page with a grid created
 createGridContainer(8);
 
-const changeSize =document.querySelector('#choseSize').addEventListener('input', e => {
+document.querySelector('#choseSize').addEventListener('input', e => {
   const SIZE = e.target.value;
   showActualSize(SIZE);
   cleanGridContainer();
