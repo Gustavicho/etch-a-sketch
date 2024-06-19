@@ -6,6 +6,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
+  border: solid .01px red;
 }
 body {
   height: 100vh;
@@ -13,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .container {
@@ -35,25 +37,31 @@ header {
 }
 /* main */
 main {
-  flex: 1;
+  gap: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .grid-container {
   background-color: #fff;
   order: 2;
   height: 500px;
   width: 500px;
-  border: solid 2px #333;
+  border: solid 2px #000;
   display: flex;
   flex-wrap: wrap;
 }
+.el-border {border: solid 1px #bbb;}
 
-.grid-element {
-  /*width: 31px;  config in js
-    height: 31px;  */
-  border: solid .1px #333;
+.settings {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: .5rem;
+  padding: 1rem;
 }
 /* footer */
 footer {
