@@ -9,19 +9,25 @@
 </head>
 <body>
   <header>
-    <h1>Etch-a-Sketch</h1>
+    <h1 class="title">Etch-a-Sketch</h1>
   </header>
   <main>
     <div class="grid-container"></div>
 
     <div class="settings">
-      <input type="color" name="userColor" id="userColor">
-      <input type="button" value="clear">
-      <input type="range" name="numOfDivs" id="numOfDivs" min="1" max="16">
+      <input type="color" name="userColor" class="btn" id="userColor">
+      <input type="button" value="Clear" class="btn" id="clearBtn">
+      
+      <div class="container">
+        <div class="divValue">8 x 8</div>
+        <input type="range" name="numOfDivs" class="btn" id="numOfDivs" value="8" min="1" max="16">
+      </div>
     </div>
   </main>
   <footer>
-    <p>Made by <a href="https://github.com/Gustavicho">Gustavicho</a></p>
+    <p class="foot-text">
+      Made by <a href="https://github.com/Gustavicho" class="foot-link">Gustavicho</a>
+    </p>
   </footer>
 </body>
 </html>
