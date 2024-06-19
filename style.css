@@ -51,7 +51,7 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
-.el-border {border: solid 1px #bbb;}
+.el-border {border: solid 1px #000;}
 
 .settings {
   height: 100%;
