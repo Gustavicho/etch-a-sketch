@@ -9,11 +9,10 @@
 }
 body {
   height: 100vh;
-  background: #fffff0;
+  background: #f0f0f0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
 .container {
@@ -36,17 +35,11 @@ header {
 }
 /* main */
 main {
+  flex: 1;
   display: flex;
-  gap: 2em;
-}
-
-.settings {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: center;
 }
-
 .grid-container {
   background-color: #fff;
   order: 2;
@@ -60,35 +53,6 @@ main {
   height: 100%;
   border: solid .1px #333;
 }
-/* buttons */
-.btn {
-  width: 100%;
-  height: 2.5rem;
-  border: solid .1em #333;
-  border-radius: .2em;
-  color: #333;
-  background: transparent;
-  transition: .2s;
-}
-.btn:hover {
-  cursor: pointer;
-  scale: 1.1;
-  color: #fffff0;
-  background: #333;
-}
-
-#userColor {
-  padding: 0;
-  height: 4.5rem;
-  width: 4.5rem;
-  border-radius: 50%;
-  
-}
-
-#clearBtn {
-  font-size: 1.25rem;
-}
-
 /* footer */
 footer {
   padding: 3rem;
