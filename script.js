@@ -1,4 +1,5 @@
 let actualColor = '#000';
+let isDrawing = false;
 // start the web page with a grid created
 createGridContainer(8);
 
@@ -26,6 +27,7 @@ document.querySelector('#grid-lines-btn').addEventListener('click', () => {
   });
 })
 
+/* ----- functions ----- */
 function createGridContainer(userInput) {
   const totalOfDivs = getNumOfDiv(userInput);
   const gridElSize = getGridElSize(userInput);
@@ -33,13 +35,8 @@ function createGridContainer(userInput) {
   for (let i = 0; i < totalOfDivs; i++){
     // create div
     let gridEl = document.createElement('div');
-    gridEl.classList.add('grid-element');     // set div classes
-    gridEl.classList.add('el-border')
-    gridEl.style.height = `${gridElSize}px`;  // set the correct height & width
-    gridEl.style.width = `${gridElSize}px`;
-    gridEl.addEventListener('mouseover', e => {
-      e.target.style.background = actualColor;
-    });
+    setGridElPropities(gridEl, gridElSize)
+    setEventListener(gridEl);
     // put div in the container
     document.querySelector('.grid-container').appendChild(gridEl);
   }
@@ -51,6 +48,30 @@ function cleanGridContainer(){
 
 function showActualSize(size){
   document.querySelector('.actual-size').textContent = `${size} x ${size}`
+}
+
+function setGridElPropities(el, elSize){
+  el.classList.add('grid-element');     // set div classes
+  el.classList.add('el-border')
+  el.setAttribute('draggable', 'false')
+  el.style.height = `${elSize}px`;  // set the correct height & width
+  el.style.width = `${elSize}px`;
+}
+
+function setEventListener(el){
+  el.addEventListener('mousedown', () => {
+    isDrawing = true;
+    el.style.backgroundColor = actualColor;
+  });
+  el.addEventListener('mousemove', () => {
+      if (isDrawing) {
+        isDrawing = true
+          el.style.backgroundColor = actualColor;
+      }
+  });
+  document.addEventListener('mouseup', () => {
+      isDrawing = false;
+  });
 }
 
 function getGridElSize(userInput){
